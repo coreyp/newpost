@@ -1,0 +1,17 @@
+#!/bin/bash
+
+blog=/home/jfalco/jfalco.github.com  ## CHANGE THIS FOR YOUR INSTALL
+now=$(date +"%Y-%m-%d")
+title=$1
+post=$blog/_posts/$now-$title.md
+
+echo "Tags?"
+read tags
+
+touch $post
+echo "---
+layout: default
+title: $1
+tags: $tags
+---" >> $post
+$EDITOR $post
