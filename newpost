@@ -14,4 +14,4 @@ layout: default
 title: $1
 tags: $tags
 ---" >> $post
-$EDITOR $post
+vim $post
