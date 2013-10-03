@@ -32,5 +32,5 @@ $comment
 
 > $excerpt
 
-[$linktitle]($linkurl)" >> $post
+[• \"$linktitle\"]($linkurl)" >> $post
 sublime $post
