@@ -1,17 +1,36 @@
 #!/bin/bash
 
-blog=/home/jfalco/jfalco.github.com  ## CHANGE THIS FOR YOUR INSTALL
+blog=/absolute/path/to/jekyll-site/source  ## CHANGE THIS FOR YOUR INSTALL
 now=$(date +"%Y-%m-%d")
 title=$1
-post=$blog/_posts/$now-$title.md
+post=$blog/_posts/$now-$title.markdown
 
-echo "Tags?"
-read tags
+echo "Categories?"
+read categories
+
+echo "Excerpt?"
+read excerpt
+
+echo "Comment?"
+read comment
+
+echo "Link Title?"
+read linktitle
+
+echo "Link URL?"
+read linkurl
 
 touch $post
 echo "---
 layout: default
-title: $1
-tags: $tags
----" >> $post
-vim $post
+title: \"$1\"
+published: true
+comments: true
+categories: [Posts, $categories]
+---
+$comment
+
+> $excerpt
+
+[$linktitle]($linkurl)" >> $post
+sublime $post
