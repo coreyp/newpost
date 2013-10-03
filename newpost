@@ -22,11 +22,11 @@ read linkurl
 
 touch $post
 echo "---
-layout: default
+layout: post
 title: \"$1\"
 published: true
 comments: true
-categories: [Posts, $categories]
+categories: [Posts, Reading, $categories]
 ---
 $comment
 
