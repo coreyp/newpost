@@ -1,8 +1,8 @@
-Simple bash script for creating a new post in Jekyll
+A simple bash script for creating a new post in Jekyll, optimized for linkblogging via Octopress.
 
-* Edit to reflect your instalation
-* Default is to open in vim, change this to your editor
-* Will prompt for tags and insert into the YAML front matter 
+• Change site path to reflect your local installation
+• Default text editor is Sublime… use Vim or whatever you like
+• Prompts for categories, title, excerpt (auto-blockquoted for linkblogging), etc., and passes input to YAML front matter 
 
 Usage
 ``` $ newpost <POST_TITLE> ```
